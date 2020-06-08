@@ -33,11 +33,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="10dp">
 
                 <TextView
                     android:id="@+id/name_cust"
-                    android:layout_width="200dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:text="Mahmoud Bashir"
                     android:textColor="#000"
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="$25.00"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textColor="#000"
                     android:textStyle="bold"
                     android:gravity="center"/>

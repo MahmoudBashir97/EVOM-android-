@@ -2,7 +2,9 @@ package com.mahmoud.bashir.evomdriverapp.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +15,7 @@ import android.view.ViewGroup;
 import com.mahmoud.bashir.evomdriverapp.R;
 import com.mahmoud.bashir.evomdriverapp.adapters.Requests_adpt;
 
-public class Requests_Fragment extends Fragment {
+public class Requests_Fragment extends FragmentActivity {
 
     RecyclerView rec_requests;
     Requests_adpt requests_adpt;
@@ -23,20 +25,18 @@ public class Requests_Fragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v= inflater.inflate(R.layout.fragment_requests, container, false);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_requests);
+
         //init views
-        rec_requests=v.findViewById(R.id.rec_requests);
+        rec_requests=findViewById(R.id.rec_requests);
 
         //recyclerView
         rec_requests.setHasFixedSize(true);
-        rec_requests.setLayoutManager(new LinearLayoutManager(getContext()));
+        rec_requests.setLayoutManager(new LinearLayoutManager(this));
 
-        requests_adpt = new Requests_adpt(getContext());
+        requests_adpt = new Requests_adpt(this);
         rec_requests.setAdapter(requests_adpt);
-
-        return v;
     }
 }
