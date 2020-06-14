@@ -40,6 +40,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.mahmoud.bashir.evomdriverapp.R;
 import com.mahmoud.bashir.evomdriverapp.fragments.Requests_Fragment;
+import com.mahmoud.bashir.evomdriverapp.ui.Profile_Activity;
+import com.mahmoud.bashir.evomdriverapp.ui.Wallet_Activity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -176,17 +178,26 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
 
         lastLocation = location;
 
-
         LatLng mylatLng = new LatLng(location.getLatitude(), location.getLongitude());
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
         mMap.clear();
         mMap.addMarker(new MarkerOptions().position(mylatLng).title("Current Location").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_location)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mylatLng));
+
+
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
+        if (id == R.id.profile_nav){
+            Intent i = new Intent(Home_MapsActivity.this, Profile_Activity.class);
+            startActivity(i);
+        }else if (id == R.id.wallet_nav){
+            Intent i = new Intent(Home_MapsActivity.this, Wallet_Activity.class);
+            startActivity(i);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

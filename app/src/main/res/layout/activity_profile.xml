@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Profile_Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_marginBottom="20dp"
+        >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ln"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/prof_back"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driver_pic"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:src="@drawable/gym"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/driver_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mahmoud"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/driver_NID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22233223322332233"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/driver_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cairo - Nasr City"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ln"
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:background="@drawable/prof_back"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort"
+                android:textSize="18sp"
+                android:textColor="#555"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="#555"/>
+            <TextView
+                android:id="@+id/car_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sort"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number"
+                android:textSize="18sp"
+                android:textColor="#555"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="#555"/>
+            <TextView
+                android:id="@+id/car_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2035fd"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Profile Info"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:background="@drawable/prof_back"
+        android:padding="8dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Car Info"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:background="@drawable/prof_back"
+        android:padding="8dp"
+        android:layout_below="@+id/ln"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+
+</RelativeLayout>
