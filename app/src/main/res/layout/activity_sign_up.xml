@@ -1,9 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SignUp_Activity">
+    tools:context=".ui.SignUp_Activity"
+    android:background="#025393">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#025393"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/word_back"
+                android:padding="5dp"
+                android:gravity="center"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/card_back"
+                app:cardCornerRadius="13dp"
+                app:cardMaxElevation="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Info"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/driver_pic"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_baseline_photo_camera_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            />
+                        <TextView
+                            android:id="@+id/upload_err"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please upload your pic!"
+                            android:textColor="#f00"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full name"
+                        android:textColor="#000"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="textPersonName"
+                        />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="mm/dd/yyyy"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/national_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="National ID"
+                        android:textColor="#000"
+                        android:inputType="number"
+                        android:maxLength="14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="take a pic of your National ID?"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/upload_NID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload"
+                            android:textSize="20sp"
+                            android:textColor="#00f"
+                            android:textStyle="normal"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account Info"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="#000"
+                        android:inputType="textEmailAddress"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pass_driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:textColor="#000"
+                        android:inputType="textPassword"
+                        android:layout_marginBottom="30dp"
+                        />
+
+                    <Button
+                        android:id="@+id/sign_up_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Sign Up"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:background="@drawable/common_back"/>
+                    <TextView
+                        android:id="@+id/to_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already have account?"
+                        android:textSize="17sp"
+                        android:textColor="#00f"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

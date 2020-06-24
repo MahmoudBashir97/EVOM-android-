@@ -20,13 +20,14 @@
                 android:layout_height="70dp"
                 android:background="@drawable/back_pic"
                 >
-                <ImageView
+                <!-- <ImageView
                     android:id="@+id/pic_cust"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/gym"/>
+                    android:src="@drawable/gym"
+                     /> -->
             </RelativeLayout>
 
             <LinearLayout
@@ -53,7 +54,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cash pay"
-                        android:textColor="#000"
+                        android:textColor="#FFF"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_centerInParent="true"/>
@@ -149,6 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Accept"
+                android:textColor="#FFF"
                 android:background="@drawable/common_back"
                 android:layout_margin="5dp"
                 android:layout_centerInParent="true"

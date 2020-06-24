@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.mahmoud.bashir.evomdriverapp.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class History_Activity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class History_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
+        ButterKnife.bind(this);
 
         // init toolbar
         setSupportActionBar(toolbar);

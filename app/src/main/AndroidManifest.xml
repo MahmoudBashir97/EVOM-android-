@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -23,12 +24,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SignUp_Activity"></activity>
-        <activity android:name=".ui.Welcome_Activity" />
-        <activity android:name=".ui.History_Activity" />
-        <activity android:name=".ui.Settings_Activity" />
-        <activity android:name=".ui.Wallet_Activity" />
-        <activity android:name=".ui.Profile_Activity" />
+
+
+        <receiver android:name=".Services.Notification_Receiver"/>
+        <receiver android:name=".Services.MyReciever"/>
+
+
+        <activity android:name=".ui.Car_Info_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Waiting_Activation_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Verify_Phone_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Login_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.SignUp_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Maps.Home_MapsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.History_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Settings_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Wallet_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.Profile_Activity"
+            android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -44,7 +65,7 @@
         <activity android:name=".fragments.Requests_Fragment" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".Maps.Home_MapsActivity"
+            android:name=".ui.Splash_Screen_Activity"
             android:label="@string/title_activity_home__maps"
             android:screenOrientation="portrait">
             <intent-filter>
