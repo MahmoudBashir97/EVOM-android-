@@ -155,27 +155,27 @@ public class SignUp_Activity extends AppCompatActivity {
             if (imageuri == null){
                 upload_err.setVisibility(View.VISIBLE);
             }else if (fname.isEmpty()){
-                full_name.setError("Please Enter your full name...!");
+                full_name.setError(""+R.string.Please_fullName_w);
                 full_name.requestFocus();
             } else if (full_name.length() < 16) {
-                full_name.setError("Please Enter right full name with length above 16 character...!");
+                full_name.setError(""+R.string.Please_fullName_right_w);
                 full_name.requestFocus();
             } else if (dte.isEmpty()) {
-                date_pic.setError("Please Enter your Date Birth...!");
+                date_pic.setError(""+R.string.Please_birthdate_w);
                 date_pic.requestFocus();
             } else if (Nat_ID.isEmpty()) {
-                national_id.setError("Please Enter your National ID...!");
+                national_id.setError(""+R.string.Please_NID_w);
                 national_id.requestFocus();
             } else if (national_id.length() < 14 || national_id.length() > 14) {
-                national_id.setError("Please Enter only 14 number...!");
+                national_id.setError(""+R.string.Please_NID_right_w);
                 national_id.requestFocus();
             } else if (Nayional_ID_URi == null) {
-                Toast.makeText(this, "please upload your National ID Pic!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, ""+R.string.Please_NID_right_w, Toast.LENGTH_SHORT).show();
             } else if (e_mail.isEmpty()) {
-                email_driver.setError("Please Enter your email ...!");
+                email_driver.setError(""+R.string.Please_Email_w);
                 email_driver.requestFocus();
             } else if (p_ass.isEmpty() || pass_driver.length() < 6) {
-                pass_driver.setError("Please Enter your Password...!");
+                pass_driver.setError(""+R.string.Please_Pass_w);
                 pass_driver.requestFocus();
             }  else {
                 mAuth.createUserWithEmailAndPassword(e_mail,p_ass)
@@ -331,7 +331,7 @@ public class SignUp_Activity extends AppCompatActivity {
             Toast.makeText(this, ""+data.getDataString(), Toast.LENGTH_SHORT).show();
             Nayional_ID_URi = data.getData();
             uri = data.getDataString();
-            upload_NID.setText("Uploaded");
+            upload_NID.setText(R.string.Uploaded_w);
 
         }else if (requestCode==IMAGE_REQUEST && resultCode== Activity.RESULT_OK
                 && data !=null && data.getData() !=null) {

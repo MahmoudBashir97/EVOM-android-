@@ -1,8 +1,89 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EVOM Driver app</string>
     <string name="title_activity_home__maps">Map</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_w">Login</string>
+    <string name="dont_have_w">Doesn\'t have account?</string>
+    <string name="register_w">SignUp</string>
+    <string name="register_space_w">Sign Up</string>
+
+    <string name="Personal_Info_w">Personal Info</string>
+    <string name="please_pic_w">Please upload your pic!</string>
+    <string name="Full_name_w">Full name</string>
+    <string name="National_ID_w">National ID</string>
+    <string name="take_NID_Pic_w">take a pic of your National ID?</string>
+    <string name="Upload_w">Upload</string>
+    <string name="Uploaded_w">Uploaded</string>
+
+    <string name="Account_Info_w">Account Info</string>
+    <string name="Email_w">Email</string>
+    <string name="Password_w">Password</string>
+
+    <string name="have_acc_w">Already have account?</string>
+
+
+    <array name="arr_lang">
+        <item>select language</item>
+        <item>العربية</item>
+        <item>English</item>
+    </array>
+
+    <string name="lang_w">language</string>
+
+    <!-- please enter .... -->
+    <string name="Please_fullName_w">Please Enter your full name...!</string>
+    <string name="Please_fullName_right_w">Please Enter right full name with length above 16 character...!</string>
+    <string name="Please_birthdate_w">Please Enter your Date Birth...!</string>
+    <string name="Please_NID_w">Please Enter your National ID...!</string>
+    <string name="Please_NID_right_w">Please Enter only 14 number...!</string>
+    <string name="Please_NID_Pic_w">please upload your National ID Pic!</string>
+    <string name="Please_Email_w">Please Enter your email ...!</string>
+    <string name="Please_Pass_w">Please Enter your Password...!</string>
+
+
+
+    <!-- navigation drawer -->
+    <string name="prfile_btn_w">profile</string>
+    <string name="wallet_btn_w">wallet</string>
+    <string name="settings_btn_w">settings</string>
+    <string name="logout_btn_w">logout</string>
+    <string name="about_btn_w">about</string>
+    <string name="contact_btn_w">contact us</string>
+
+
+    <!-- HomeMaps -->
+    <string name="offline_w">offline</string>
+    <string name="online_w">online</string>
+    <string name="tips_err_w">you are offline</string>
+
+    <!-- Requests Item -->
+    <string name="cash_pay_w">Cash pay</string>
+    <string name="pick_up_w">PICK UP</string>
+    <string name="drop_off_w">DROP OFF</string>
+    <string name="accept_btn_w">accept</string>
+    <string name="refuse_btn_w">refuse</string>
+
+
+    <!-- Verification Activity -->
+    <string name="Verification_w">Verification</string>
+    <string name="Verify_txt_w">Please Enter Verify Code !</string>
+    <string name="verify_hint_w">Verify Code</string>
+    <string name="send_btn_w">Send</string>
+
+    <!-- Profile_Activity -->
+    <string name="Profile_Info_w">Profile Info</string>
+    <string name="Car_Info_w">Car Info</string>
+    <string name="Sort_w">Model</string>
+    <string name="Number_w">Number</string>
+
+    <!-- Wallet Activity -->
+    <string name="Total_Balance_w">Total Balance</string>
+    <string name="Currency_w">EGP</string>
+
+
+
 </resources>

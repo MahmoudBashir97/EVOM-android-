@@ -8,9 +8,6 @@
     tools:context=".ui.SignUp_Activity"
     android:background="#025393">
 
-
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +19,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/register_space_w"
                 android:textColor="#025393"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -39,7 +36,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/card_back"
                 app:cardCornerRadius="13dp"
-                app:cardMaxElevation="8dp">
+                app:cardMaxElevation="15dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -49,7 +46,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Personal Info"
+                    android:text="@string/Personal_Info_w"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -71,7 +68,7 @@
                             android:id="@+id/upload_err"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Please upload your pic!"
+                            android:text="@string/please_pic_w"
                             android:textColor="#f00"
                             android:textSize="15sp"
                             android:layout_gravity="center"
@@ -88,7 +85,7 @@
                         android:id="@+id/full_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Full name"
+                        android:hint="@string/Full_name_w"
                         android:textColor="#000"
                         android:layout_marginBottom="10dp"
                         android:inputType="textPersonName"
@@ -109,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
-                        android:hint="National ID"
+                        android:hint="@string/National_ID_w"
                         android:textColor="#000"
                         android:inputType="number"
                         android:maxLength="14" />
@@ -123,13 +120,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="take a pic of your National ID?"
+                            android:text="@string/take_NID_Pic_w"
                             android:textSize="16sp"/>
                         <TextView
                             android:id="@+id/upload_NID"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Upload"
+                            android:text="@string/Upload_w"
                             android:textSize="20sp"
                             android:textColor="#00f"
                             android:textStyle="normal"/>
@@ -137,7 +134,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Account Info"
+                        android:text="@string/Account_Info_w"
                         android:textColor="#000"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -149,7 +146,7 @@
                         android:id="@+id/email_driver"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email"
+                        android:hint="@string/Email_w"
                         android:textColor="#000"
                         android:inputType="textEmailAddress"
                         android:layout_marginBottom="10dp"
@@ -159,7 +156,7 @@
                         android:id="@+id/pass_driver"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/Password_w"
                         android:textColor="#000"
                         android:inputType="textPassword"
                         android:layout_marginBottom="30dp"
@@ -172,7 +169,7 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"
-                        android:text="Sign Up"
+                        android:text="@string/register_space_w"
                         android:textSize="18sp"
                         android:textColor="#FFF"
                         android:textStyle="bold"
@@ -180,14 +177,14 @@
                         android:background="@drawable/common_back"/>
                     <TextView
                         android:id="@+id/to_login"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Already have account?"
+                        android:text="@string/have_acc_w"
                         android:textSize="17sp"
                         android:textColor="#00f"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="15dp"
                         android:layout_marginBottom="20dp"
+                        android:gravity="center"
                         />
 
                 </LinearLayout>

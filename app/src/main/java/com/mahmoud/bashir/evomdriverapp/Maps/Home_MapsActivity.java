@@ -9,7 +9,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -19,13 +18,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -58,6 +55,7 @@ import com.mahmoud.bashir.evomdriverapp.ViewModel.Driver_Status_ViewModel;
 import com.mahmoud.bashir.evomdriverapp.fragments.Requests_Fragment;
 import com.mahmoud.bashir.evomdriverapp.ui.Login_Activity;
 import com.mahmoud.bashir.evomdriverapp.ui.Profile_Activity;
+import com.mahmoud.bashir.evomdriverapp.ui.Settings_Activity;
 import com.mahmoud.bashir.evomdriverapp.ui.Wallet_Activity;
 
 import java.util.ArrayList;
@@ -67,6 +65,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.paperdb.Paper;
 
 public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCallback , NavigationView.OnNavigationItemSelectedListener
         , GoogleApiClient.ConnectionCallbacks,
@@ -86,12 +85,15 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
     @BindView(R.id.go_btn) TextView go_btn;
     @BindView(R.id.floatingActionButton) FloatingActionButton floatingActionButton;
 
+    @BindView(R.id.tips_noRequests) RelativeLayout tips_noRequests;
+
     @BindView(R.id.rel_go) RelativeLayout rel_go;
     @BindView(R.id.rel_user_info) RelativeLayout rel_user_info;
     @BindView(R.id.user_img) ImageView user_img;
     @BindView(R.id.call_to_user) ImageView call_to_user;
     @BindView(R.id.user_name) TextView user_name;
     @BindView(R.id.update_curr_km) TextView update_curr_km;
+
 
 
     private final static int REQUEST_CODE_ASK_PERMISSIONS = 1;
@@ -121,15 +123,16 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
     // customer Latlng info;
     Double customer_lat,customer_lng;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawer_main);
+       setContentView(R.layout.drawer_main);
+
+        Paper.init(this);
+
+
         ButterKnife.bind(this);
-
         checkPermissions();
-
         // init views
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -157,13 +160,12 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
         //viewModel
         driver_status_viewModel = ViewModelProviders.of(this).get(Driver_Status_ViewModel.class);
 
+
         //Driver ID on Firebase
         CUID = auth.getCurrentUser().getUid();
 
 
         String FCUID = getIntent().getStringExtra("FCUID");
-        Toast.makeText(this, "CUID : "+auth.getCurrentUser().getUid(), Toast.LENGTH_SHORT).show();
-        //Toast.makeText(this, "fcuid : "+FCUID, Toast.LENGTH_LONG).show();
 
 
         Switch_orders_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -173,7 +175,8 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
                     if (lastLocation != null){
                         if (isNetworkConnected()){
                             driver_status_viewModel.status.setValue("online");
-                            txt_status.setText("online");
+                            txt_status.setText(R.string.online_w);
+                            tips_noRequests.setVisibility(View.GONE);
                         }else{
                             Toast.makeText(Home_MapsActivity.this, "please check your internet...!", Toast.LENGTH_SHORT).show();
                         }
@@ -181,8 +184,9 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
                 }else {
                     if (lastLocation != null){
                         driver_status_viewModel.status.setValue("offline");
-                        txt_status.setText("offline");
+                        txt_status.setText(R.string.offline_w);
                         UpdateDriverStatus("offline");
+                        tips_noRequests.setVisibility(View.VISIBLE);
                         driver_ref.child(CUID).removeValue();
                     }
                 }
@@ -299,15 +303,14 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
             public void onChanged(String s) {
                 if (s.equals("online")){
                     UpdateDriverStatus("online");
-                    manager.setRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 6000, 6000, pendingIntent);
+                    //manager.setRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 6000, 6000, pendingIntent);
                     st=s;
                 }else if (s.equals("offline")){
-                    manager.cancel(pendingIntent);
+                   // manager.cancel(pendingIntent);
                     st="offline";
                 }
             }
         });
-
     }
 
     public void getData_Intent(){
@@ -327,7 +330,6 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
 
                 customer_lat = Double.parseDouble(getIntent().getStringExtra("cust_lat"));
                 customer_lng = Double.parseDouble(getIntent().getStringExtra("cust_lng"));
-
 
             }
         }catch (Exception e){
@@ -364,6 +366,9 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
             if (lastLocation != null){
                 manager.cancel(pendingIntent);
             }
+        }else if (id == R.id.setting_nav){
+            Intent i = new Intent(Home_MapsActivity.this, Settings_Activity.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -432,7 +437,7 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
         driver_status_viewModel.status.setValue("offline");
         if (lastLocation != null){
             if (st.equals("online")){
-            manager.cancel(pendingIntent);
+            //manager.cancel(pendingIntent);
         }
         }
     }
@@ -444,7 +449,7 @@ public class Home_MapsActivity extends AppCompatActivity implements OnMapReadyCa
         driver_status_viewModel.status.setValue("offline");
         if (lastLocation != null){
             if (st.equals("online")){
-                manager.cancel(pendingIntent);
+               // manager.cancel(pendingIntent);
             }
         }
     }
