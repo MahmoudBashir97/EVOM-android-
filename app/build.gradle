@@ -70,7 +70,17 @@ dependencies {
     //ViewModel
     implementation 'android.arch.lifecycle:extensions:2.0.0'
 
-
+    // used for locale language
     implementation 'io.paperdb:paperdb:2.7.1'
+
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+    //for Draw Polyline
+    implementation 'com.github.amalChandran:trail-android:v1.51'
 
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Waiting_Activation_Activity"
+    android:background="#FFF">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_back"
+        app:cardCornerRadius="13dp"
+        app:cardMaxElevation="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="150dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <ProgressBar
+                android:id="@+id/pr"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="please wait until your ID verify..."
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/pr"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

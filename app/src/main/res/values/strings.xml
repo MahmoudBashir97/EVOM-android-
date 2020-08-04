@@ -45,7 +45,6 @@
     <string name="Please_Pass_w">Please Enter your Password...!</string>
 
 
-
     <!-- navigation drawer -->
     <string name="prfile_btn_w">profile</string>
     <string name="wallet_btn_w">wallet</string>
@@ -65,7 +64,7 @@
     <string name="pick_up_w">PICK UP</string>
     <string name="drop_off_w">DROP OFF</string>
     <string name="accept_btn_w">accept</string>
-    <string name="refuse_btn_w">refuse</string>
+    <string name="reject_btn_w">reject</string>
 
 
     <!-- Verification Activity -->
@@ -85,5 +84,13 @@
     <string name="Currency_w">EGP</string>
 
 
+    <!-- Complete mission fragment -->
+    <string name="congratulation_w">Congratulation!</string>
+    <string name="complete_message_w">Great work , you have completed this mission , we really prode of you.</string>
+    <string name="rest_of_fare_w">rest of fare</string>
+    <string name="egp_w">EGP</string>
+    <string name="add_btn_w">Add</string>
+    <string name="quest_wallet_w">Is there is a rest of fare?</string>
+    <string name="add_to_user_wallet_w">Add to user wallet</string>
 
 </resources>

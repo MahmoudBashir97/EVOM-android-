@@ -35,15 +35,26 @@
         android:layout_margin="10dp"
         />
     <TextView
+        android:id="@+id/wallet_val"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EGP 300.57"
+        android:text="300.57"
         android:textColor="#fff"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_margin="10dp"
         android:layout_below="@+id/balance"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/egp_w"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/balance"
+        android:layout_toRightOf="@+id/wallet_val"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_wallet"

@@ -30,6 +30,7 @@
 
 
         <receiver android:name=".Services.Notification_Receiver"/>
+        <receiver android:name=".Services.MyReciever"/>
         <receiver android:name=".Services.Fcm.MyReceiver"/>
         <service android:name=".Services.Fcm.MyFirebaseMessagingService">
             <intent-filter>

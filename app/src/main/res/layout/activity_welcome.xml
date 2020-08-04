@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Welcome_Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gym"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EVOM Driver App"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/to_next"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/wlc_back"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

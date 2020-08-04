@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EVOM Driver app</string>
+    <string name="title_activity_home__maps">Map</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_w">الدخول</string>
+    <string name="dont_have_w">ليس لديك حساب؟</string>
+    <string name="register_w">التسجيل</string>
+    <string name="register_space_w">التسجيل</string>
+
+    <string name="Personal_Info_w">معلومات شخصية</string>
+    <string name="please_pic_w">من فضلك قم بإضافة صورتك الشخصية!</string>
+    <string name="Full_name_w">الاسم كامل</string>
+    <string name="National_ID_w">الرقم القومي</string>
+    <string name="take_NID_Pic_w">قم بتصوير البطاقة الخاصة بك؟</string>
+    <string name="Upload_w">تحميل</string>
+    <string name="Uploaded_w">تم التحميل</string>
+
+    <string name="Account_Info_w">معلومات الحساب</string>
+    <string name="Email_w">الايميل</string>
+    <string name="Password_w">كلمة المرور</string>
+
+    <string name="have_acc_w">لديك حساب بالفعل؟</string>
+
+
+    <!-- please enter .... -->
+    <string name="Please_fullName_w">برجاء ادخال الاسم كاملا ...!</string>
+    <string name="Please_fullName_right_w">برجاء ادخال اسمك الثلاثي ...!</string>
+    <string name="Please_birthdate_w">برجاء ادخال تاريخ الميلاد ...!</string>
+    <string name="Please_NID_w">برجاء ادخال الرقم القومي الخاص بك ...!</string>
+    <string name="Please_NID_right_w">ادخل فقط 14 رقم ...!</string>
+    <string name="Please_NID_Pic_w">برجاء تحميل صورة البطاقة الشخصية الخاصة بك؟</string>
+    <string name="Please_Email_w">برجاء ادخال الايميل ...!</string>
+    <string name="Please_Pass_w">برجاء ادخال كلمة المرور ...!</string>
+
+
+    <!-- navigation drawer -->
+    <string name="prfile_btn_w">الملف الشخصي</string>
+    <string name="wallet_btn_w">المحفظة</string>
+    <string name="settings_btn_w">الإعدادات</string>
+    <string name="logout_btn_w">تسجيل خروج</string>
+    <string name="about_btn_w">من نحن</string>
+    <string name="contact_btn_w">تواصل معنا</string>
+
+
+    <!-- HomeMaps -->
+    <string name="offline_w">غير متصل</string>
+    <string name="online_w">online</string>
+    <string name="tips_err_w">أنت غير متصل لن تستقبل أي طلبات </string>
+
+
+    <!-- Requests Item -->
+    <string name="cash_pay_w">الدفع كاش</string>
+    <string name="pick_up_w">أحضره من</string>
+    <string name="drop_off_w">أوصله إلى</string>
+    <string name="accept_btn_w">قبول</string>
+    <string name="reject_btn_w">رفض</string>
+
+
+
+    <!-- Verification Activity -->
+    <string name="Verification_w">Verification</string>
+    <string name="Verify_txt_w">أدخل كود التأكيد الذي تم إرساله!</string>
+    <string name="verify_hint_w">كود التأكيد</string>
+    <string name="send_btn_w">إرسال</string>
+
+
+
+    <string name="lang_w">اللغة</string>
+
+
+    <!-- Profile_Activity -->
+    <string name="Profile_Info_w">معلومات شخصية</string>
+    <string name="Car_Info_w">معلومات السيارة</string>
+    <string name="Sort_w">الموديل</string>
+    <string name="Number_w">رقم اللوحة</string>
+
+
+    <!-- Wallet Activity -->
+    <string name="Total_Balance_w">إجمالي</string>
+    <string name="Currency_w">ج.م</string>
+
+    <!-- Complete mission fragment -->
+    <string name="congratulation_w">تهانينا!</string>
+    <string name="complete_message_w">عمل عظيم , لقد أكملت هذه المهمة , نحن فخورين بك حقا.</string>
+    <string name="rest_of_fare_w">باقي الأجرة</string>
+    <string name="egp_w">ج.م</string>
+    <string name="add_btn_w">اضافة</string>
+    <string name="quest_wallet_w">هل يوجد باقي من الاجرة؟</string>
+    <string name="add_to_user_wallet_w">اضافة الى محفظة العميل</string>
+
+
+</resources>
